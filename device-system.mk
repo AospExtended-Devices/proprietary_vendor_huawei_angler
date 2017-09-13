@@ -17,33 +17,41 @@
 # An overlay for features that depend on proprietary files
 DEVICE_PACKAGE_OVERLAYS := vendor/huawei/angler/overlay
 
-PRODUCT_COPY_FILES += \
-    vendor/huawei/angler/proprietary/system/app/HwMMITest/lib/arm64/libManufacture.so:system/app/HwMMITest/lib/arm64/libManufacture.so \
-    vendor/huawei/angler/proprietary/system/bin/ssr_setup:system/bin/ssr_setup \
-    vendor/huawei/angler/proprietary/system/bin/subsystem_ramdump:system/bin/subsystem_ramdump \
-    vendor/huawei/angler/proprietary/system/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
-    vendor/huawei/angler/proprietary/system/etc/permissions/com.android.omadm.service.xml:system/etc/permissions/com.android.omadm.service.xml \
-    vendor/huawei/angler/proprietary/system/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
-    vendor/huawei/angler/proprietary/system/etc/sysconfig/whitelist_com.android.omadm.service.xml:system/etc/sysconfig/whitelist_com.android.omadm.service.xml \
-    vendor/huawei/angler/proprietary/system/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
-    vendor/huawei/angler/proprietary/system/lib64/libManufacture.so:system/lib64/libManufacture.so \
-    vendor/huawei/angler/proprietary/system/lib/libdmengine.so:system/lib/libdmengine.so \
-    vendor/huawei/angler/proprietary/system/lib/libdmjavaplugin.so:system/lib/libdmjavaplugin.so \
-    vendor/huawei/angler/proprietary/system/lib/soundfx/libfmas.so:system/lib/soundfx/libfmas.so \
-    vendor/huawei/angler/proprietary/system/priv-app/DMService/lib/arm/libdmengine.so:system/priv-app/DMService/lib/arm/libdmengine.so \
-    vendor/huawei/angler/proprietary/system/priv-app/DMService/lib/arm/libdmjavaplugin.so:system/priv-app/DMService/lib/arm/libdmjavaplugin.so
+$(call inherit-product, vendor/huawei/angler/angler-vendor-blobs.mk)
 
+# Prebuilt APKs
 PRODUCT_PACKAGES += \
     HwMMITest \
     HwSarControlService \
+    ims \
+    SetupSmartDeviceOverlay \
+    TimeService
+
+# Prebuilt jars
+PRODUCT_PACKAGES += \
+    qcrilhook
+
+# Prebuilt privileged APKs
+PRODUCT_PACKAGES += \
     atfwd \
+    CallStatistics \
+    CarrierEntitlement \
     CarrierServices \
     CNEService \
     ConnMO \
     DCMO \
     DiagMon \
     DMService \
+    GCS \
     HiddenMenu \
-    HotwordEnrollment \
+    HotwordEnrollmentWCD9330 \
     qcrilmsgtunnel \
     SprintDM
+
+# Symlinks
+PRODUCT_PACKAGES += \
+    libimsmedia_jni.so \
+    libimscamera_jni.so \
+    libdmengine.so \
+    libdmjavaplugin.so \
+    libManufacture.so
