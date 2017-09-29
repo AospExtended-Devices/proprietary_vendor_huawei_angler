@@ -612,11 +612,9 @@ PRODUCT_COPY_FILES += \
     vendor/huawei/angler/proprietary/vendor/lib/soundfx/libqcomvoiceprocessing.so:vendor/lib/soundfx/libqcomvoiceprocessing.so \
     vendor/huawei/angler/proprietary/vendor/lib/soundfx/libreverbwrapper.so:vendor/lib/soundfx/libreverbwrapper.so \
     vendor/huawei/angler/proprietary/vendor/lib/soundfx/libvisualizer.so:vendor/lib/soundfx/libvisualizer.so \
-    vendor/huawei/angler/proprietary/vendor/media/LMspeed_508.emd:vendor/media/LMspeed_508.emd \
-    vendor/huawei/angler/proprietary/vendor/media/PFFprec_600.emd:vendor/media/PFFprec_600.emd \
     vendor/huawei/angler/proprietary/vendor/qcril_database/upgrade/1_version_intro.sql:vendor/qcril_database/upgrade/1_version_intro.sql \
     vendor/huawei/angler/proprietary/vendor/qcril_database/upgrade/2_db_upgrade.sql:vendor/qcril_database/upgrade/2_db_upgrade.sql \
     vendor/huawei/angler/proprietary/vendor/qcril_database/upgrade/3_remove_ecc_999_from_us_and_canada.sql:vendor/qcril_database/upgrade/3_remove_ecc_999_from_us_and_canada.sql \
     vendor/huawei/angler/proprietary/vendor/qcril.db:vendor/qcril.db \
-	vendor/huawei/angler/proprietary/vendor/build.prop:vendor/build.prop \
+    vendor/huawei/angler/proprietary/vendor/build.prop:vendor/build.prop \
     vendor/huawei/angler/proprietary/vendor/xbin/wlutil:vendor/xbin/wlutil
