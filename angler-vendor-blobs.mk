@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES += \
-    vendor/huawei/angler/proprietary/system/system/bin/nanoapp_cmd:system/bin/nanoapp_cmd \
+    vendor/huawei/angler/proprietary/system/bin/nanoapp_cmd:system/bin/nanoapp_cmd \
     vendor/huawei/angler/proprietary/system/bin/ssr_setup:system/bin/ssr_setup \
     vendor/huawei/angler/proprietary/system/bin/subsystem_ramdump:system/bin/subsystem_ramdump \
     vendor/huawei/angler/proprietary/system/etc/diag/Angler_Radio-general.cfg:system/etc/diag/Angler_Radio-general.cfg \
